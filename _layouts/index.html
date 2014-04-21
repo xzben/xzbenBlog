@@ -18,8 +18,8 @@
             </div>
             <ul class="menu">
                 <li><a href="{{ site.url }}">首页</a></li>
-  				{% for category in site.categories %}
-                <li><a href="/categories/{{ category | first }}">{{ category | first }} </a></li>
+  				{\% for category in site.categories %\}
+                <li><a href="/categories/{\{ category | first }\}/">{\{ category | first }\} </a></li>
                 {% endfor %}
             </ul>
         </div>
