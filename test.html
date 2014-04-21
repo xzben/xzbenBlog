@@ -19,4 +19,13 @@ title:	我的blog
 			return 0;
 		}
 		{% endhighlight %}
+		
+		
+		<h4>Category</h4>
+		<ul>
+			{% for category in site.categories %}
+			<li><a href="/categories/{{ category | first }}" title="view all posts">{{ category | first }} {{ category | last | size }}</a>
+			</li>
+			{% endfor %}
+</ul>
 	</ul>
