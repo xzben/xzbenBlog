@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+.menu{
+	padding:10px;
+	background:#333;
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px; /* Old Firefox */
+}
+
+.menu li{
+	display:inline;
+	margin:0px  20px;
+	padding:10px 10px;
+	border-radius:20px;
+	-moz-border-radius:20px; /* Old Firefox */
+	font-weight:bolder;
+}
+
+.menu li:hover{
+	background:#999;
+	cursor:pointer;
+}
+
+.menu li a{
+	color:#FFF;
+	text-decoration:none;
+}

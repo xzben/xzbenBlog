@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+/**********************************************************/
+@keyframes tagAnimation
+{
+from 
+{
+	transform:rotateX(0deg);
+	-webkit-transform:rotateX(0deg); /* Safari and Chrome */
+	-moz-transform:rotateX(0deg); /* Firefox */
+}
+to 
+{
+	transform:rotateX(360deg);
+	-webkit-transform:rotateX(360deg); /* Safari and Chrome */
+	-moz-transform:rotateX(360deg); /* Firefox */
+}
+}
+
+@-moz-keyframes tagAnimation /* Firefox */
+{
+from 
+{
+	transform:rotateX(0deg);
+	-webkit-transform:rotateX(0deg); /* Safari and Chrome */
+	-moz-transform:rotateX(0deg); /* Firefox */
+}
+to 
+{
+	transform:rotateX(360deg);
+	-webkit-transform:rotateX(360deg); /* Safari and Chrome */
+	-moz-transform:rotateX(360deg); /* Firefox */
+}
+}
+
+@-webkit-keyframes tagAnimation /* Safari 和 Chrome */
+{
+from 
+{
+	transform:rotateX(0deg);
+	-webkit-transform:rotateX(0deg); /* Safari and Chrome */
+	-moz-transform:rotateX(0deg); /* Firefox */
+}
+to 
+{
+	transform:rotateX(360deg);
+	-webkit-transform:rotateX(360deg); /* Safari and Chrome */
+	-moz-transform:rotateX(360deg); /* Firefox */
+}
+}
+
+@-o-keyframes tagAnimation /* Opera */
+{
+from 
+{
+	transform:rotateX(0deg);
+	-webkit-transform:rotateX(0deg); /* Safari and Chrome */
+	-moz-transform:rotateX(0deg); /* Firefox */
+}
+to 
+{
+	transform:rotateX(360deg);
+	-webkit-transform:rotateX(360deg); /* Safari and Chrome */
+	-moz-transform:rotateX(360deg); /* Firefox */
+}
+}
+#header .tag{
+	width:175px;
+	height:85px;
+	margin-left:20px;
+	background:#FFF;
+	border:#000 solid 1px;
+	padding:10px 0px;
+	box-shadow:10px 10px 10px #666;
+	animation: tagAnimation 5s;
+	-moz-animation: tagAnimation 5s;	/* Firefox */
+	-webkit-animation: tagAnimation 5s;	/* Safari 和 Chrome */
+	-o-animation: tagAnimation 5s;	/* Opera */
+	animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:infinite; /* Safari 和 Chrome */
+}
+
+#header .tag span{
+	text-align:center;
+	display:block;
+	padding:10px 0px;
+}
