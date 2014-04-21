@@ -44,7 +44,6 @@
                 	<p class="tool_title">Category</p>
                 	<div class="tool_content">
                     	<ul id="category">
-                           <li><a href="#">c++ <span>(1)<span></a></li>
                            	{% for category in site.categories %}
 							<li><a href="/categories/{{ category | first }}" title="view all posts">{{ category | first }}<span>({{ category | last | size }})</span></a></li>
 							{% endfor %}
@@ -56,8 +55,7 @@
                 	<div class="tool_content">
                     	<ul id="latest_article_list">
 							{% for post in site.posts %}
-							<li>{{ post.date | date_to_string }}
-							<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+							<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><span>[{{ post.date | date_to_string }}]</span></li>
 							{% endfor %}
                         </ul>
                     </div>
