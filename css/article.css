@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.article{
+	border-bottom:#666 solid 2px;
+}
+
+.article > .article_title{
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:24px;
+	font-weight:bolder;
+}
+
+.article > .article_property{
+
+}
+
+.article > .article_property > .article_publish_time{
+	color:#F00;
+}
+
+.article > .article_property > .article_author{
+
+}
+
+.article > .article_property > .article_category{
+
+}
+
+.article > .article_preview{
+
+}
+
+.tool{
+	height:200px;
+}
+.tool > p {
+	margin:0px;
+}
+.tool > .tool_title{
+	border-bottom:#900 solid 10px;
+	border-radius:1px;
+}
+
+.tool > .tool_content{
+
+}
