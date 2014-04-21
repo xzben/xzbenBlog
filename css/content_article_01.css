@@ -15,34 +15,28 @@
 .article > .article_property{
 
 }
-
+.article_property  span{
+	padding: 3px 0 3px 30px;
+	background:url(../img/icons.png) no-repeat;
+	line-height:20px;
+}
 .article > .article_property > .article_publish_time{
 	color:#F00;
+	background-position: 5px 0;
 }
 
 .article > .article_property > .article_author{
-
+	background-position: 5px -20px;
 }
 
 .article > .article_property > .article_category{
+	background-position: 5px -40px;
+}
 
+.article > .article_property > .article_tag{
+	background-position: 5px -80px;
 }
 
 .article > .article_preview{
-
-}
-
-.tool{
-	height:200px;
-}
-.tool > p {
-	margin:0px;
-}
-.tool > .tool_title{
-	border-bottom:#900 solid 10px;
-	border-radius:1px;
-}
-
-.tool > .tool_content{
 
 }
