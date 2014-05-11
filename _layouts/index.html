@@ -47,22 +47,8 @@
 				  {% endif %}
 				   <select id="pagination_select"  class="pages" onchange="selectChange()">
 						{% for count in (1..paginator.total_pages) %}
-						<option value="
-							{{ site.baseurl }}/
-							{% if count >= 2%}
-								page{{ count }}
-							{% endif %}"
-							
-						{% if count == paginator.page %}
-							selected="selected"
-						{% endif %}>
-						{{ count }}							
-						</option>
-					{% endfor %}
-						<option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
+						<option value="{{ site.baseurl }}/{% if count >= 2%}page{{ count }}{% endif %}" {% if count == paginator.page %}selected="selected"{% endif %}>{{ count }}</option>
+						{% endfor %}
                    </select>
 				  {% if paginator.next_page %}
 					<p class="next">
