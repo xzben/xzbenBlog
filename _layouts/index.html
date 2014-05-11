@@ -8,6 +8,7 @@
 <link href="{{ site.baseurl }}/css/header_menu_01.css" rel="stylesheet" type="text/css" />
 <link href="{{ site.baseurl }}/css/content_article_01.css" rel="stylesheet" type="text/css" />
 <link href="{{ site.baseurl }}/css/content_tool_01.css" rel="stylesheet" type="text/css" />
+<script src="{{ site.baseurl }}/js/pagination_select.js" type="text/javascript" ></script>
 </head>
 
 <body>
@@ -31,40 +32,41 @@
 				{% endfor %}
 				<div id="post-pagination" class="pagination">
 				  {% if paginator.previous_page %}
-					<p class="previous">
+					<span class="previous">
+					  <span class="previous_img">&nbsp;&nbsp;&nbsp;</span>
 					  {% if paginator.previous_page == 1 %}
-						<a href="/">Previous</a>
+						<a href="{{ site.baseurl }}/">Previous</a>
 					  {% else %}
-						<a href="{{ paginator.previous_page_path }}">Previous</a>
+						<a href="{{ site.baseurl }}/{{ paginator.previous_page_path }}">Previous</a>
 					  {% endif %}
-					</p>
+					</span>
 				  {% else %}
-					<p class="previous disabled">
+					<span class="previous disabled">
 					  <span>Previous</span>
-					</p>
+					</span>
 				  {% endif %}
-				  <ul class="pages">
-					<li class="page">
-					  {% if paginator.page == 1 %}
-						<span class="current-page">1</span>
-					  {% else %}
-						<a href="/">1</a>
-					  {% endif %}
-					</li>
-
-					{% for count in (2..paginator.total_pages) %}
-					  <li class="page">
+				   <select id="pagination_select"  class="pages" onchange="selectChange()">
+						{% for count in (1..paginator.total_pages) %}
+						<option value="
+							{{ site.baseurl }}/
+							{% if count >= 2%}
+								page{{ count }}
+							{% endif %}"
+							
 						{% if count == paginator.page %}
-						  <span class="current-page">{{ count }}</span>
-						{% else %}
-						  <a href="/page{{ count }}">{{ count }}</a>
-						{% endif %}
-					  </li>
+							selected="selected"
+						{% endif %}>
+						{{ count }}							
+						</option>
 					{% endfor %}
-				  </ul>
+						<option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                   </select>
 				  {% if paginator.next_page %}
 					<p class="next">
-					  <a href="{{ paginator.next_page_path }}">Next</a>
+					  <a href="{{ site.baseurl }}/{{ paginator.next_page_path }}">Next</a>
 					</p>
 				  {% else %}
 					<p class="next disabled">

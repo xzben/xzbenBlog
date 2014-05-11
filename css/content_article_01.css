@@ -49,9 +49,50 @@
 }
 
 .article > .article_preview{
-
+	
 }
 
 .article > .article_full_text{
 	
+}
+
+.pagination{
+	display:inline;
+}
+
+.pagination .previous_img{
+	width:30px;
+	background:url(../img/icons.png) no-repeat;
+	line-height:20px;
+	background-position: 5px -140px;
+}
+
+.pagination .previous{
+	float:left;
+	padding-right:10px;
+}
+.pagination .disabled{
+	
+}
+.pagination .pages{
+	margin:0px;
+	padding:0px;
+	float:left;
+	list-style-type:none;
+	display:inline;
+}
+.pagination .page{
+	
+}
+
+.pagination .next{
+	float:left;
+	padding-left:10px;
+}
+
+.pagination .next_img{
+	width:30px;
+	background:url(../img/icons.png) no-repeat;
+	line-height:20px;
+	background-position: 5px -120px;
 }
