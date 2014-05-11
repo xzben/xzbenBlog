@@ -15,7 +15,7 @@
     	 {% include header.html %}
         <div id="content">
         	<div id="article_list">
-				{% for post in site.posts %}
+				{% for post in paginator.posts %}
 				<div class="article">
 					<p class="article_title">{{ post.title }}</p>
 					<p class="article_property"> 
@@ -29,6 +29,19 @@
 					</p>
 				</div>
 				{% endfor %}
+				<div class="pagination">
+				  {% if paginator.previous_page %}
+					<a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+				  {% else %}
+					<span class="previous">Previous</span>
+				  {% endif %}
+				  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+				  {% if paginator.next_page %}
+					<a href="/page{{ paginator.next_page }}" class="next">Next</a>
+				  {% else %}
+					<span class="next ">Next</span>
+				  {% endif %}
+				</div>
 			</div>
            {% include tools.html %}
             <div class="clear"></div>

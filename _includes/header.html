@@ -6,7 +6,7 @@
 	<ul class="menu">
 		<li><a href="{{ site.baseurl }}">首页</a></li>
 		{% for category in site.categories %}
-		<li><a href="/categories/{{ category | first }}">{{ category | first }} </a></li>
+		<li><a href="{{ site.baseurl }}/categories/{{ category | first }}">{{ category | first }} </a></li>
 		{% endfor %}
 	</ul>
 </div>
