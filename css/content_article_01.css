@@ -2,14 +2,25 @@
 /* CSS Document */
 
 
-.article{
+#article_list .article{
 	border-bottom:#666 solid 2px;
 }
 
-.article > .article_title{
+#article_show .article{
+	
+}
+
+#article_list .article > .article_title{
 	font-family:"Arial Black", Gadget, sans-serif;
 	font-size:24px;
 	font-weight:bolder;
+}
+
+#article_show .article > .article_title{
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:24px;
+	font-weight:bolder;
+	text-align:center;
 }
 
 .article > .article_property{
@@ -39,4 +50,8 @@
 
 .article > .article_preview{
 
+}
+
+.article > .article_full_text{
+	
 }
