@@ -42,7 +42,7 @@
                 	<div class="tool_content">
                     	<ul id="latest_article_list">
 							{% for post in site.posts %}
-							<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><span>[{{ post.date | date_to_string }}]</span></li>
+							<li><a href="{{ post.url }}">{{ post.title }}</a><span>[{{ post.date | date_to_string }}]</span></li>
 							{% endfor %}
                         </ul>
                     </div>
