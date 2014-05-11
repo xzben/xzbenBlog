@@ -17,7 +17,7 @@
             	<span style="font-size:12px; color:#333; ">见证我成长的足迹</span>
             </div>
             <ul class="menu">
-                <li><a href="{{ site.url }}">首页</a></li>
+                <li><a href="{{ site.baseurl }}">首页</a></li>
   				{% for category in site.categories %}
                 <li><a href="/categories/{{ category | first }}">{{ category | first }} </a></li>
                 {% endfor %}
@@ -28,10 +28,10 @@
             	<div class="article">
                 	<p class="article_title">{{ page.title }}</p>
                     <p class="article_property"> 
-                    	<span class="article_publish_time">2014-04-17</span>
-                    	<span class="article_author">xzben</span>
-                        <span class="article_category">c/c++</span>
-                        <span class="article_tag">tag</span>
+                    	<span class="article_publish_time">{{ page.date }}</span>
+						<span class="article_author">{{ page.author }}</span>
+						<span class="article_category">{{ page.categories }}</span>
+						<span class="article_tag">{{ page.tags }}</span>
                     </p>
                     <p class="article_full_text">
                     	{{ page.content }}
