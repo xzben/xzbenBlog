@@ -28,7 +28,7 @@
             	<div class="article">
                 	<p class="article_title">{{ page.title }}</p>
                     <p class="article_property"> 
-                    	<span class="article_publish_time">{{ page.date }}</span>
+                    	<span class="article_publish_time">{{ page.date | date_to_string }}</span>
 						<span class="article_author">{{ page.author }}</span>
 						<span class="article_category">{{ page.categories }}</span>
 						<span class="article_tag">{{ page.tags }}</span>
